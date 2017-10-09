@@ -9,17 +9,19 @@ import 'react-select/dist/react-select.css';
 import AsyncLoader from '../ui/AsyncLoader';
 import LoansService from '../../dataApi/LoansService';
 import type { LoansServiceType } from '../../dataApi/LoansService';
-import * as loansActions from '../../actions/loansActions';
+import loadAmountsByRating from '../../actions/loansActions';
 
 @connect((store) => {
   const { market } = store;
   return { market, isLoading: market.loansLoading };
-}, { loadAmountsByRating: loansActions.loadAmountsByRating })
+}, { loadAmountsByRating })
 @AsyncLoader
 export default class Stats extends Component {
   static propTypes = {
     loadAmountsByRating: PropTypes.func,
     market: PropTypes.object,
+    /* eslint react/no-unused-prop-types:0 */
+    isLoading: PropTypes.bool,
   };
 
   constructor(props) {

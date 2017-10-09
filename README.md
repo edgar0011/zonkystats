@@ -1,8 +1,8 @@
 # zonkystats
-react, redux, webpack
--- axios
--- recharts
+- react, redux, webpack
+- axios
+- recharts
 
-
-- yarn
-- npm run dev2 | npm run dev
+###run:
+ - yarn
+ - npm run dev2 | npm run dev
