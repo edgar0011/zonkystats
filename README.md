@@ -5,4 +5,4 @@
 
 ### run:
  - yarn
- - npm run dev2 | npm run dev
+ - yarn start | npm run dev2 | npm run dev
