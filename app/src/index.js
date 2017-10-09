@@ -6,6 +6,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, Route, Redirect, browserHistory } from 'react-router';
+/* eslint no-unused-vars:0 */
+import * as d from 'babel-polyfill';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootswatch/cosmo/bootstrap.css';
@@ -14,8 +16,9 @@ import './styles/bootstrap-override.scss';
 import './styles/main.scss';
 
 import MainLayout from './components/MainLayout';
-import Todo from './components/todo/Todo';
+
 import Main from './components/main/Main';
+import Loans from './components/stats/Loans';
 import store from './stores/store';
 
 /* global document */
@@ -23,10 +26,10 @@ const app = document.getElementById('app');
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Redirect from="/" to="main" />
+      <Redirect from="/" to="loans" />
       <Route path="/" component={MainLayout}>
+        <Route path="loans" component={Loans} />
         <Route path="main" component={Main} />
-        <Route path="todo" component={Todo} />
       </Route>
     </Router>
   </Provider>

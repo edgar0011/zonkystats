@@ -13,7 +13,7 @@ module.exports = {
     "no-underscore-dangle": 2,
     "no-console": 0,
     "no-plusplus": 0,
-    "no-debugger": 2,
+    "no-debugger": 1,
 //    "comma-dangle": ["error", "always"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/no-unknown-property": [2, { "ignore": ["class", "for"] }],

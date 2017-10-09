@@ -16,3 +16,6 @@ export const USER_LOADING = 'userLoading';
 export const USER_LOAD_FAILED = 'userLoadFailed';
 
 export const REMOVE_USER = 'removeUser';
+
+export const LOAD_AMOUNTS_BY_RATING = 'loadAmountsByRating';
+export const AMOUNTS_BY_RATING_LOADED = 'amountsByRatingLoaded';
