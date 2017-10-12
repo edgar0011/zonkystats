@@ -5,7 +5,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route, Redirect, browserHistory } from 'react-router';
+import { Router, Route, Redirect, hashHistory } from 'react-router';
 /* eslint no-unused-vars:0 */
 import * as d from 'babel-polyfill';
 
@@ -25,7 +25,7 @@ import store from './stores/store';
 const app = document.getElementById('app');
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
       <Redirect from="/" to="loans" />
       <Route path="/" component={MainLayout}>
         <Route path="loans" component={Loans} />
