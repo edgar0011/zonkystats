@@ -8,8 +8,8 @@ import thunk from 'redux-thunk';
 import loansReducer from '../reducers/loansReducer';
 
 const rootReducer = combineReducers({ market: loansReducer });
-let window;
 const composeEnhancers =
+  /* global window */
   typeof window === 'object' &&
   /* eslint no-underscore-dangle: 0 */
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
