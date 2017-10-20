@@ -1,3 +1,4 @@
+// @flow
 
 import React, { Component } from 'react';
 import { Button, Col, Row } from 'reactstrap';
@@ -16,7 +17,7 @@ import loadAmountsByRating from '../../actions/loansActions';
   return { market, isLoading: market.loansLoading };
 }, { loadAmountsByRating })
 @AsyncLoader
-export default class Stats extends Component {
+export default class Stats extends Component<any, void> {
   static propTypes = {
     loadAmountsByRating: PropTypes.func,
     market: PropTypes.object,
@@ -24,7 +25,7 @@ export default class Stats extends Component {
     isLoading: PropTypes.bool,
   };
 
-  constructor(props) {
+  constructor(props:any) {
     super(props);
     this.service = new LoansService();
   }
@@ -33,7 +34,7 @@ export default class Stats extends Component {
     this.getLoansByRating([this.props.market.ratingOptions[0].value]);
   }
 
-  getLoansByRating(rating) {
+  getLoansByRating(rating?:Array<string>) {
     return this.props.loadAmountsByRating(rating);
   }
 
@@ -41,7 +42,7 @@ export default class Stats extends Component {
     this.getLoansByRating();
   };
 
-  handleRatingChange = (val) => {
+  handleRatingChange = (val:{value:string}) => {
     this.getLoansByRating([val.value]);
   };
 

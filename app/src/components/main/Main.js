@@ -1,3 +1,4 @@
+// @flow
 
 import React, { Component } from 'react';
 import { Button, Col, Row } from 'reactstrap';
@@ -12,7 +13,7 @@ import * as usersActions from '../../actions/usersActions';
 }, { getUsers: usersActions.getUsers,
   getUser: usersActions.getUser,
   removeUser: usersActions.removeUser })
-export default class Main extends Component {
+export default class Main extends Component<any, any> {
   static propTypes = {
     getUsers: PropTypes.func,
     getUser: PropTypes.func,
@@ -21,7 +22,7 @@ export default class Main extends Component {
     users: PropTypes.object,
   };
 
-  constructor(props) {
+  constructor(props:any) {
     super(props);
     this.state = {
       emphasized: false,
@@ -38,7 +39,7 @@ export default class Main extends Component {
     this.props.getUsers();
   };
 
-  handleUserClick(user) {
+  handleUserClick(user:{id:number}) {
     this.props.getUser(user.id).then((response) => {
       console.log('handleUserClick ', response);
       this.setState({ userDetailOpened: true });
@@ -51,7 +52,7 @@ export default class Main extends Component {
     this.setState({ userDetailOpened: false });
   }
 
-  handleRemoveUser = (id) => {
+  handleRemoveUser = (id:number) => {
     if (this.props.users.user && this.props.users.user.id === id) {
       this.hideUserDetail();
     }
