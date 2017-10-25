@@ -1,8 +1,8 @@
 module.exports = {
   "extends": "airbnb",
   "plugins": [
-   "react",
-   "flowtype"
+    "react",
+    "flowtype"
   ],
   "parser": "babel-eslint",
   "rules": {
@@ -13,12 +13,12 @@ module.exports = {
     "no-underscore-dangle": 2,
     "no-console": 0,
     "no-plusplus": 0,
-    "no-debugger": 1,
+    "no-debugger": 2,
 //    "comma-dangle": ["error", "always"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/no-unknown-property": [2, { "ignore": ["class", "for"] }],
     "react/require-default-props": 0,
-  "react/forbid-prop-types": [0, { "forbid": ['array', 'object'] }],
+    "react/forbid-prop-types": [0, { "forbid": ['array', 'object'] }],
     "class-methods-use-this": 0
   }
 };
