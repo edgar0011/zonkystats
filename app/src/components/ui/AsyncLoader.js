@@ -4,7 +4,7 @@ import '../../styles/zonky.scss';
 
 export default function AsyncLoader(Content) {
   /* eslint react/prefer-stateless-function: 0 */
-  return class AsyncLoaderClass extends Component {
+  return class extends Component {
     static propTypes = {
       isLoading: PropTypes.bool,
     };
@@ -28,6 +28,7 @@ export default function AsyncLoader(Content) {
                 position: 'absolute',
                 fontSize: '26px',
                 fontWeight: 'bolder',
+                width: '120px',
                 left: '50%',
                 top: '50%',
               }}

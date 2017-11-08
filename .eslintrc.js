@@ -1,8 +1,8 @@
 module.exports = {
   "extends": "airbnb",
   "plugins": [
-    "react",
-    "flowtype"
+   "react",
+   "flowtype"
   ],
   "parser": "babel-eslint",
   "rules": {
@@ -14,7 +14,7 @@ module.exports = {
     "no-console": 0,
     "no-plusplus": 0,
     "no-debugger": 2,
-//    "comma-dangle": ["error", "always"],
+    "comma-dangle": ["error", "only-multiline"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/no-unknown-property": [2, { "ignore": ["class", "for"] }],
     "react/require-default-props": 0,
