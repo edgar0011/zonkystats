@@ -2,7 +2,6 @@
 
 import express from 'express';
 import bodyParser from 'body-parser';
-import Promise from 'promise';
 
 const app = express();
 
